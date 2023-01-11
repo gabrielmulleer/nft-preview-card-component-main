@@ -10,37 +10,35 @@
 
   <title>Frontend Mentor | NFT preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-  <main class="card">
-    <div class="card-img">
-      <img src="./assets/images/icon-view.svg" alt="description">
-      <img src="./assets/images/image-equilibrium.jpg" alt="description">
-    </div>
-    <div class="card-content">
-      <h1 class="">Equilibrium #3429</h1>
-
-      <p class="">Our Equilibrium collection promotes balance and calm.</p>
-
-      <div class="">
-        <h2 class=""><img src="./assets/images/icon-ethereum.svg" alt="description"> 0.041 ETH</h2>
-        <h3 class=""><img src="./assets/images/icon-clock.svg" alt=""> 3 days left</h3>
+  <main>
+    <div class="card-container b-15"> <!-- Por hora, ok -->
+      <div class="card-img "> <!-- Por hora, ok -->
+        <div class="icon-view"><img src="./assets/images/icon-view.svg" alt="description"></div>
+        <div class="equilibrium-img b-9 "><img src="./assets/images/image-equilibrium.jpg" class="b-9 hover"
+            alt="description">
+        </div>
       </div>
 
-      <img src="./assets/images/image-avatar.png" alt="" class="avatar">
-      <h4 class="">Creation of <span class="">Jules Wyvern</span></h4>
+      <div class="card-content">
+        <h1 class="f-22 fw-600 c-white hover">Equilibrium #3429</h1>
+
+        <p class="f-18 fw-300 c-sft-blue">Our Equilibrium collection promotes balance and calm.</p>
+
+        <div class="price-time">
+          <h2 class="f-16 fw-600 c-cyan"><img src="./assets/images/icon-ethereum.svg" alt="description"> 0.041 ETH</h2>
+          <h3 class="f-16 fw-400 c-sft-blue"><img src="./assets/images/icon-clock.svg" alt=""> 3 days left</h3>
+        </div>
+        <div class="avatar">
+          <img src="./assets/images/image-avatar.png" alt="" class="b-16">
+          <h4 class="f-16 fw-400 c-sft-blue">Creation of <span class="c-white hover">Jules Wyvern</span></h4>
+        </div>
+      </div>
     </div>
   </main>
 
