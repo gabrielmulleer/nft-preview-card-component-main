@@ -72,10 +72,10 @@ body {
 /* Container */
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    height: 100vh;
+    min-height: 100vh;
 
 }
 
@@ -95,8 +95,6 @@ main {
 
 /* Image */
 .card-img {
-    max-height: 18.875rem;
-    max-width: 18.875rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,18 +103,22 @@ main {
 
 
 .icon-view {
-    position: relative;
-    z-index: 1;
-    height: 18.875rem;
-    width: 18.875rem;
-    background: rgba(0, 255, 247, 0.6);
-    border-radius: 9px;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    z-index: 1;
+
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    background: rgba(0, 255, 247, 0.6);
     opacity: 0;
+
+    height: 18.875rem;
+    width: 18.875rem;
+    margin: auto -1.5rem;
+    border-radius: .5625rem;
 }
 
 .card-img:hover .icon-view {
@@ -128,8 +130,8 @@ main {
 }
 
 .icon-view img {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
 }
 
 
@@ -182,7 +184,6 @@ main {
 .price-time h3 {
     display: flex;
     align-items: center;
-
 }
 
 .price-time h3 img {
@@ -209,7 +210,7 @@ main {
 }
 
 .avatar h4 {
-    line-height: 20px;
+    line-height: 1.25rem;
     letter-spacing: 0.01em;
 }
 
@@ -224,10 +225,94 @@ main {
 
 /* Footer */
 .attribution {
-    font-size: 11px;
+    margin-block: 0.5rem;
+    font-size: .6875rem;
     text-align: center;
+    color: hsl(215, 51%, 70%);
+
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Media query */
+@media screen and (min-width: 36em) and (min-height: 36.25em) {
+    .attribution {
+        position: fixed;
+        bottom: 0.325rem;
+        right: 0px;
+        left: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+
+    /* Container */
+    .card-container {
+        width: 20.375rem;
+        height: 33.9375rem;
+    }
+
+    /* Images */
+    .icon-view {
+        height: 17.375rem;
+        width: 17.375rem;
+        margin: auto;
+    }
+
+    .icon-view img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .equilibrium-img {
+        max-height: 17.375rem;
+        max-width: 17.375rem;
+    }
+
+    .equilibrium-img img {
+        height: 17.375rem;
+        width: 17.375rem;
+    }
+
+    /* Content */
+    .card-content p {
+        padding-top: 1.125rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 160%;
+    }
+
+    .price-time {
+        height: 1.1875rem;
+        margin-bottom: 1.0625rem;
+    }
+
+    .price-time h2 {
+        font-size: .9375rem;
+    }
+
+    .price-time h3 {
+        font-size: .9375rem;
+    }
+
+    .avatar {
+        padding-top: 1rem;
+    }
+
+    .avatar h4 {
+        font-size: .9375rem;
+        line-height: 1.1875rem;
+    }
+
+    /* Footer */
+    .attribution {
+        position: fixed;
+        bottom: 0.325rem;
+        width: 100%;
+        right: 0px;
+        left: 0px;
+    } 
 }
